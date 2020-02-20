@@ -4,8 +4,8 @@
 
   - HTML/CSS
   - fontawesome-al.min.css
-  -tailwind.css
-  -기타 이미지 파일
+  - tailwind.css
+  - 기타 이미지 파일
 
 
 -화면구성
