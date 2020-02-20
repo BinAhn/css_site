@@ -2,12 +2,10 @@
 
 관리자 사이트 UI 샘플 HTML/CSS 작업내용을 관리합니다.
 
-  - 아래 내용을 포함하고 있습니다.
-  
-> HTML/CSS
-> fontawesome-al.min.css
-> tailwind.css
-> 기타 이미지 파일
+  - HTML/CSS
+  - fontawesome-al.min.css
+  -tailwind.css
+  -기타 이미지 파일
 
 
 -화면구성
