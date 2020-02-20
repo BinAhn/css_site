@@ -1,4 +1,4 @@
-# css_site
+# 관리자 사이트 UI 샘플 -css_site-
 
 관리자 사이트 UI 샘플 HTML/CSS 작업내용을 관리합니다.
 
