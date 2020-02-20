@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        font: 12px/1.6 "Margun Gothic", sans-serif;
+      }
+	  
+      .content {
+        /* absolute : 최상위(지정한 영역 다른 box 위에 올라가 있음) relative : 지정한 영역은 존재하고 다른 box위에 올라갈 수 있음, fixed = absolute와 비슷 */
+        position: relative;
+        left: 50%;
+        top: 50%;
+        border: 2px solid black;
+        width: 800px;
+        height: 400px;
+        padding: 20px;
+        margin-left: -400px;
+        margin-top: -200px;
+        background-color: lime;
+      }
+      .content .inn {
+        padding: 20px;
+			  border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="inn">
+        <h1>content Title</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla cum
+          sunt itaque, voluptates corporis eius omnis voluptate consequuntur
+          deserunt nisi, laborum vel quos. Sapiente dolores quas culpa alias
+          exercitationem quam enim corporis totam sint rerum corrupti, sit
+          reprehenderit in sunt autem ipsam nihil, laborum non laudantium sed
+          magni ipsum! Harum commodi deleniti voluptas impedit accusamus modi
+          quidem deserunt maxime sequi, nulla suscipit, voluptate quibusdam odit
+          distinctio? Tempore placeat ipsa animi dignissimos delectus deleniti,
+          aut, officiis error quisquam quae excepturi voluptatem nam? Dolor,
+          maiores saepe. Maiores ipsa corrupti, deleniti vitae voluptatem
+          distinctio exercitationem, velit esse et dolorum repudiandae
+          doloremque. Quia, impedit?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

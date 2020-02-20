@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font: 12px/1.6 "Margun Gothic", sans-serif;
+      }
+      img {
+        vertical-align: top;
+      }
+      .area {
+        width: 800px;
+        overflow: hidden; /* 영역에서 넘치는 부분을 숨김 area:after clear와 같은 기능 */
+        margin: 0 auto; /*밖 여백*/
+        border: 3px dashed red;
+      }
+      .area:after {
+        content: "";
+        display: block;
+        clear: both;
+        *zoom: 1; /* IE6, IE7 Hack*/
+      }
+      .area h1 {
+        padding: 15px 0;
+      }
+      .area .thumb {
+        float: left;
+        border: 3px solid black;
+        /* margin: 15px 0 15px 0; */
+      }
+
+      .cls {
+        clear: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="area">
+      <div class="thumb">
+        <img src="http://placehold.it/100x120?text=1" alt="" />
+      </div>
+      <div class="thumb">
+        <img src="http://placehold.it/100x120?text=2" alt="" />
+      </div>
+      <div class="thumb">
+        <img src="http://placehold.it/100x120?text=3" alt="" />
+      </div>
+      <div class="thumb">
+        <img src="http://placehold.it/100x120?text=4" alt="" />
+      </div>
+      <div class="thumb">
+        <img src="http://placehold.it/100x120?text=5" alt="" />
+      </div>
+      <!--Clear 위치-->
+    </div>
+    <p class="cls">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
+      sapiente deserunt dicta quo sequi cum impedit quas facilis repudiandae
+      facere inventore vitae eligendi velit fuga accusamus vel dolores, eum qui
+      at corrupti iste quam eaque culpa ipsum. Id quam odio quibusdam commodi
+      animi eius, molestias odit ea dolor voluptatum. Quia perferendis, neque
+      similique cumque culpa rem sit illo facilis ad fugit autem repudiandae
+      iusto est dolor vitae repellendus minus placeat commodi adipisci
+      cupiditate voluptatum soluta molestiae possimus? Sed ut pariatur nesciunt,
+      ratione recusandae nostrum iste, sit qui laboriosam id deleniti ea
+      voluptas illum natus delectus veritatis eum aspernatur ab perspiciatis.
+      Harum nesciunt maxime adipisci saepe fugit accusantium quasi sit vero.
+      Porro id repellat animi accusantium molestiae earum? Ad sint obcaecati
+      saepe quae eius explicabo rerum architecto repellat tenetur, esse fugit
+      iusto distinctio ex. Eligendi, nesciunt tempore necessitatibus repudiandae
+      ea ratione. Aperiam architecto obcaecati quaerat voluptates nesciunt
+      reprehenderit praesentium natus assumenda labore. Impedit, iure! Minus
+      vitae nesciunt reprehenderit, nulla neque doloribus nam tempore error odio
+      doloremque voluptates nihil magni eum eveniet repellendus facere, corrupti
+      consequuntur. Quam aliquid, repudiandae eaque eos sequi enim expedita ad
+      nisi tenetur temporibus, quos amet non? Iusto commodi minus distinctio
+      voluptates quis deserunt similique neque dolor nesciunt?
+    </p>
+  </body>
+</html>

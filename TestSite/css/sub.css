@@ -1,0 +1,114 @@
+@charset "utf-8";
+/*
+iframe내 페이지 관련 CSS 정리
+*/
+.mwrap {
+  /* position: relative; */
+
+  padding: 10px 20px 30px 20px;
+}
+
+.title-wrap {
+  position: relative;
+  margin-top: 30px;
+  height: 35px;
+  border-bottom: 1px solid #ededed;
+}
+
+.title-wrap h2 {
+  float: left;
+  margin-left: 40px;
+  height: 35px;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  border-bottom: 1px solid #e67e22; /* #75a3ee;*/
+}
+
+.table-wrap.horizontal {
+  border-top: 1px solid #2e313a;
+  border-left: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+}
+
+.table-wrap.horizontal .type1 {
+  position: relative;
+}
+
+.table {
+  margin-top: 0;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.table-wrap.horizontal .type1 > tbody > tr:first-child > th,
+.table-wrap.horizontal .type1 > tbody > tr:first-child > td {
+  border-top: none;
+}
+
+.table-wrap.horizontal .type1 th {
+  border-left: 0;
+  border-right: 0;
+}
+
+.table-wrap.horizontal .table th,
+.table-wrap.horizontal .table td {
+  text-align: left;
+}
+
+.table-wrap.horizontal th {
+  vertical-align: top;
+}
+
+.table th,
+.table .th {
+  background-color: #f9f9f9;
+  letter-spacing: -1px;
+}
+
+.table th {
+  padding: 14px 20px 14px 20px;
+}
+
+.table th,
+.table td {
+  border-spacing: 0;
+  border: 1px solid #ededed;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: inherit;
+  color: #666;
+}
+
+.table-wrap.horizontal .type1 > tbody > tr:first-child > th,
+.table-wrap.horizontal .type1 > tbody > tr:first-child > td {
+  border-top: none;
+}
+.table-wrap.horizontal .table th,
+.table-wrap.horizontal .table td {
+  text-align: left;
+}
+.table-wrap.horizontal td {
+  border-left: 0;
+  border-right: 0;
+}
+.table-wrap.horizontal td {
+  position: relative;
+}
+.table td {
+  padding: 10px 20px;
+}
+.table th,
+.table td {
+  border-spacing: 0;
+  border: 1px solid #ededed;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: inherit;
+  color: #666;
+}

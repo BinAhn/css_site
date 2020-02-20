@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font: 12px/1.6 "Margun Gothic", sans-serif;
+      }
+      .box {
+        /* absolute : 최상위(지정한 영역 다른 box 위에 올라가 있음) relative : 지정한 영역은 존재하고 다른 box위에 올라갈 수 있음, fixed = absolute와 비슷 */
+        /*position: fixed;
+         left: 100px;
+        top: 100px; */
+        border: 2px solid black;
+        width: 200px;
+        padding: 20px;
+        background-color: lime;
+      }
+      .box::first-letter {
+        font-size: 2em;
+        font-weight: bold;
+      }
+      .a {
+        position: absolute;
+        /* z-index: 1; 클수록 앞으로 나옴*/
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+      .b {
+        left: 50px;
+        top: 50px;
+        position: absolute;
+
+        background-color: rgba(0, 255, 0, 0.5);
+      }
+      .c {
+        left: 100px;
+        top: 100px;
+        position: absolute;
+
+        background-color: rgba(0, 0, 255, 0.5);
+      }
+      .area {
+        width: 800px;
+        margin: 0 auto;
+        position: relative;
+        border: 2px dashed red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="area">
+      <div class="box a">
+        A Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus at
+        dolorum consequatur magnam iste sequi, aperiam, eveniet in nemo, sit
+        dolores repudiandae esse similique molestiae error saepe reiciendis. Ex,
+        iusto?
+      </div>
+      <div class="box b">
+        B Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus at
+        dolorum consequatur magnam iste sequi, aperiam, eveniet in nemo, sit
+        dolores repudiandae esse similique molestiae error saepe reiciendis. Ex,
+        iusto?
+      </div>
+      <div class="box c">
+        C B Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus at
+        dolorum consequatur magnam iste sequi, aperiam, eveniet in nemo, sit
+        dolores repudiandae esse similique molestiae error saepe reiciendis. Ex,
+        iusto?
+      </div>
+    </div>
+    <hr />
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates
+      dolorem dolore, atque laboriosam cumque error tenetur debitis iusto
+      dignissimos distinctio vero est, quo facere soluta explicabo veritatis
+      quasi, ut perspiciatis saepe magni excepturi odio esse voluptatibus. Aut
+      tempora inventore architecto dolorem blanditiis delectus quidem! Amet
+      eligendi vel, pariatur laborum id sint repudiandae sed soluta praesentium
+      hic, animi obcaecati quia suscipit ratione ad dignissimos commodi!
+      Provident mollitia quam minima reiciendis deserunt placeat error amet
+      dolores? Voluptatem deserunt omnis, veniam aliquid magni inventore totam
+      perferendis quasi molestias cumque culpa laborum at voluptates accusantium
+      voluptate labore obcaecati, excepturi, repudiandae quos ea cupiditate
+      consectetur fugiat adipisci! Libero earum voluptatum ratione ut tenetur?
+      Eius vel ratione, reprehenderit accusamus ipsam atque? Molestiae sint
+      molestias sit, minus quaerat corporis eos voluptas iure, deserunt fugiat,
+      nostrum neque! Fuga illum consectetur commodi iste error recusandae non
+      sunt aut voluptas, quos officiis odit at amet facere reiciendis. Nostrum,
+      voluptate, iusto voluptatem repellendus quasi impedit atque dolores
+      consequuntur sapiente commodi ut vitae qui nesciunt aut fugit! Natus,
+      aspernatur quo nam debitis voluptas exercitationem quidem facere sint
+      reprehenderit autem ipsam accusamus quod cupiditate voluptatum quae ullam
+      non deleniti veniam molestiae officiis eveniet rem. Ea consequuntur ad,
+      commodi aliquid in quae quam illo.
+    </p>
+  </body>
+</html>

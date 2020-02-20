@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/global.css" />
+<link rel="stylesheet" href="css/tailwind.css" />
+<link rel="stylesheet" href="css/sub.css" />
+
+<div class="mwrap">
+  <div class="title-wrap">
+    <h2>배송현황</h2>
+  </div>
+  <br /><br /><br />
+  <!--Search -->
+
+  <form id="searchForm" name="searchForm" onsubmit="return false;">
+    <div class="table-wrap horizontal">
+      <table class="table type1">
+        <!-- type1 -->
+        <caption></caption>
+        <colgroup>
+          <col width="130px" />
+          <col width="400px" />
+          <col width="130px" />
+          <col width="*" />
+        </colgroup>
+        <tbody>
+          <tr>
+            <th><span class="title">검색기간</span></th>
+            <td colspan="3">
+              <div class="form inline">
+                <select
+                  class="input medium"
+                  id="schDateType"
+                  name="schDateType"
+                >
+                  <option value="orderDt" selected="selected">주문일시</option>
+                  <option value="originShipDt">발송기한</option>
+                  <option value="delayShipDt">2차 발송기한</option>
+                  <option value="confirmDt">주문확인일</option>
+                  <option value="completedDt">결제일</option>
+                  <option value="shipCompleteDt">배송완료일</option>
+                </select>
+                <div class="ui-datepicker-wrap">
+                  <input
+                    type="text"
+                    id="schStartDate"
+                    name="schStartDate"
+                    class="input hasDatepicker"
+                    value=""
+                    placeholder="시작일"
+                  /><button type="button" class="ui-datepicker-trigger">
+                    <img
+                      src="/static/images/calendar.gif"
+                      alt="날짜를 선택하세요"
+                      title="날짜를 선택하세요"
+                    />
+                  </button>
+                  <span class="text">~</span>
+                  <input
+                    type="text"
+                    id="schEndDate"
+                    name="schEndDate"
+                    class="input hasDatepicker"
+                    value=""
+                    placeholder="종료일"
+                  /><button type="button" class="ui-datepicker-trigger">
+                    <img
+                      src="/static/images/calendar.gif"
+                      alt="날짜를 선택하세요"
+                      title="날짜를 선택하세요"
+                    />
+                  </button>
+                </div>
+                <div class="btn-tab-wrap">
+                  <button class="btn-tab setDate on" id="setTodayBtn">
+                    오늘
+                  </button>
+                  <!-- default -->
+                  <button class="btn-tab setDate" id="setOneWeekBtn">
+                    1주일
+                  </button>
+                  <button class="btn-tab setDate" id="setOneMonthBtn">
+                    1개월
+                  </button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th><span class="title">검색조건</span></th>
+            <td>
+              <div class="form inline">
+                <select class="input medium" id="schType" name="schType">
+                  <option value="">상세검색전체</option>
+                  <option value="purchaseNo">구매번호</option>
+                  <option value="orderNo">주문번호</option>
+                  <option value="prodNo">상품번호</option>
+                  <option value="prodNm">상품명</option>
+                  <option value="bundleNo">배송번호</option>
+                  <option value="receiverNm">받는사람</option>
+                  <option value="invoiceNo">송장번호</option>
+                </select>
+                <input
+                  type="text"
+                  class="input large"
+                  id="schValue"
+                  name="schValue"
+                />
+              </div>
+            </td>
+            <th><span class="title">주문상태</span></th>
+            <td>
+              <select
+                class="input medium"
+                id="schShipStatus"
+                name="schShipStatus"
+              >
+                <option value="">전체</option>
+
+                <option value="D3" selected="selected">배송중</option>
+
+                <option value="D4">배송완료</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- //table-wrap -->
+
+    <!-- button-wrap -->
+    <div class="button-wrap">
+      <button type="submit" id="searchBtn" class="button large red">
+        검색
+      </button>
+      <button type="button" id="resetBtn" class="button large ">초기화</button>
+    </div>
+    <!-- //button-wrap -->
+
+    <!-- result-title -->
+    <div class="result-title">
+      <p>
+        <strong id="deliveryStatTitle">상세 검색 결과</strong
+        ><span id="searchCnt">0건</span>
+      </p>
+      <div class="button-wrap">
+        <select class="input small" id="schLimitCnt" name="schLimitCnt">
+          <option value="50">50개</option>
+          <option value="100" selected="selected">100개</option>
+          <option value="200">200개</option>
+          <option value="300">300개</option>
+          <option value="400">400개</option>
+          <option value="500">500개</option>
+        </select>
+      </div>
+    </div>
+    <!-- //result-title -->
+
+    <input type="hidden" id="schTotalFlag" name="schTotalFlag" />
+  </form>
+
+  <!--//Search -->
+</div>

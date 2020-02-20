@@ -1,0 +1,543 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* reset */
+body {
+  /* padding-top: 50px; */
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+}
+.blind {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -9999em;
+  overflow: hidden;
+}
+.skip a {
+  position: absolute;
+  left: 0;
+  top: -9999em;
+  z-index: 9999;
+  display: block;
+  width: 100%;
+  background-color: navy;
+  color: #efefef;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2;
+}
+.skip a:focus {
+  top: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+hr {
+  display: none;
+}
+
+/* style */
+#wrap {
+  margin: 0 auto;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 30;
+  width: 100%;
+  background-color: #2e313a;
+}
+#header .logo {
+  float: left;
+}
+#header .logo a {
+  display: block;
+  padding: 0 20px;
+  background-color: #4d6c8b;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+#header .logo a:hover {
+  background-color: #ccc;
+  color: #000;
+}
+#header .logo a i {
+  margin-right: 10px;
+}
+
+#header .nav {
+  float: right;
+}
+
+#header .btn_nav {
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background-image: none;
+  background-color: #2e313a;
+  color: #eee;
+  font-size: 16px;
+  line-height: 50px;
+  cursor: pointer;
+  float: right;
+}
+#header .btn_nav:hover {
+  background-color: #ccc;
+  color: #000;
+}
+#header .userifo {
+  display: block;
+  color: #eee;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 50px;
+  float: left;
+  margin-right: 10px;
+}
+
+#header .lnb {
+  position: absolute;
+  top: 50px;
+  left: -100%;
+  width: 100%;
+  cursor: pointer;
+}
+#header .lnb li a {
+  display: block;
+  padding-left: 20px;
+  border-bottom: 1px solid #333;
+  background-color: #2e313a;
+  color: #ccc;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+#header .lnb li a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* #container {
+  position: relative;
+  width: 100%;
+  top: 50px;
+} */
+#container {
+  padding-top: 50px;
+  background-color: #ecedf2;
+}
+#container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* #snb {
+  float: left;
+  border-right: 1px solid #555;
+  width: 200px;
+  min-height: 600px;
+  height: calc(100vh - 50px);
+  top: 10px;
+} */
+#snb {
+  float: left;
+  border-right: 1px solid #2e313a;
+  width: 200px;
+  height: calc(100vh - 50px);
+  box-sizing: border-box;
+}
+
+#snav li a {
+  display: block;
+  padding-left: 20px;
+  border-bottom: 1px solid rgb(39, 32, 32);
+  font-size: 15px;
+  color: white;
+  background-color: #2e313a;
+  line-height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+#snav li .active {
+  background-color: #06b3a1;
+  color: white;
+}
+
+#snav li a:hover:not(.active) {
+  background-color: #5ebdb3;
+  color: white;
+  font-weight: bold;
+}
+
+/* #content {
+  position: relative;
+} */
+#content {
+  float: left;
+  width: calc(100% - 200px);
+  background-color: #ecedf2;
+  /* padding: 10px; */
+}
+
+/* #content h2 {
+  display: block;
+  margin-left: 210px;
+  line-height: 40px;
+} */
+#content h2 {
+  margin-left: 20px;
+  line-height: 40px;
+}
+
+/* #content .box-top {
+  display: flex;
+} */
+
+/* #content .box-top ::after {
+  display: block;
+  clear: both;
+} */
+/*
+#content .box1 {
+  float: left;
+  width: 50%;
+  height: 300px;
+  border: #555 2px solid;
+}
+#content .box2 {
+  float: right;
+  width: 30%;
+  height: 300px;
+  border: #555 2px solid;
+} */
+#content .box-top:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#content .box1,
+#content .box2 {
+  float: left;
+  width: 590px;
+  height: 366px;
+  border: #555 1px solid;
+  box-sizing: border-box;
+}
+
+#content .box-middle:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#content .box3,
+#content .box4,
+#content .box5 {
+  float: left;
+  width: 590px;
+  height: 366px;
+
+  box-sizing: border-box;
+}
+
+#content .in-box {
+  margin-left: 14px;
+  background-color: #fff;
+  border: #e1e2e7 1px solid;
+}
+#content .box-lg {
+  width: 590px;
+  height: 366px;
+}
+
+.main-title-wrap {
+  padding: 18px 30px;
+  min-height: 18px;
+}
+
+.main-title-wrap p {
+  color: #000;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.main-title-wrap .txt-sm {
+  margin-left: 10px;
+  color: #aaa;
+  font-size: 12px;
+}
+
+.ico .more {
+  width: 19px;
+  height: 19px;
+  background-position: -50px -100px;
+}
+.main-title-wrap .more {
+  position: absolute;
+  top: 18px;
+  right: 30px;
+}
+
+.ico {
+  background: url(./img/ico_common.png);
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -999px;
+}
+
+/* #content .box-middle {
+  display: flex;
+}
+
+#content h3 {
+  display: block;
+  margin-left: 20px;
+  line-height: 30px;
+}
+
+/* #content table {
+  border: 1px solid #555;
+  width: 100%;
+} */
+
+.table {
+  width: 99%;
+  table-layout: auto;
+  border-top: 1px solid #afb8c1;
+  margin-left: 2px;
+}
+.table th {
+  color: #61717f;
+  border-left: 1px solid #d8dbdf;
+  border-bottom: 1px solid #d8dbdf;
+  padding: 7px 10px 5px 10px;
+  background-color: #e9f0f9;
+}
+.table td {
+  border-left: 1px solid #d8dbdf;
+  border-bottom: 1px solid #d8dbdf;
+  padding: 7px 10px 5px 10px;
+}
+
+.tbl_type,
+.tbl_type th,
+.tbl_type td {
+  border: 0;
+}
+.tbl_type {
+  width: 100%;
+  border-bottom: 2px solid #dcdcdc;
+  font-family: "돋움", dotum;
+  font-size: 12px;
+  text-align: center;
+  border-collapse: collapse;
+}
+.tbl_type caption {
+  display: none;
+}
+.tbl_type tfoot {
+  background-color: #f5f7f9;
+  font-weight: bold;
+}
+.tbl_type th {
+  padding: 7px 0 4px;
+  border-top: 2px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+  border-left: 1px solid #dcdcdc;
+  background-color: #f5f7f9;
+  color: #666;
+  font-family: "돋움", dotum;
+  font-size: 12px;
+  font-weight: bold;
+}
+.tbl_type td {
+  padding: 6px 0 4px;
+  border: 1px solid #e5e5e5;
+  color: #4c4c4c;
+}
+.tbl_type td.ranking {
+  font-weight: bold;
+}
+
+/* #container {
+  position: relative;
+  z-index: 40;
+}
+
+#snb .snb-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+  color: black;
+  padding: 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 25px;
+  cursor: pointer;
+  width: 100px;
+}
+
+#container .tle {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+  padding: 0 20px;
+  background-color: #000;
+  color: #eee;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 65px;
+  cursor: pointer;
+} */
