@@ -32,15 +32,6 @@ iframe내 페이지 관련 CSS 정리
   border-right: 1px solid #ededed;
 }
 
-.table-wrap.horizontal .type1 {
-  position: relative;
-}
-
-.table {
-  margin-top: 0;
-  border-collapse: collapse;
-}
-
 table {
   width: 100%;
   border-spacing: 0;
@@ -51,54 +42,13 @@ table {
   border-top: none;
 }
 
-.table-wrap.horizontal .type1 th {
-  border-left: 0;
-  border-right: 0;
-}
-
-.table-wrap.horizontal .table th,
-.table-wrap.horizontal .table td {
-  text-align: left;
-}
-
-.table-wrap.horizontal th {
-  vertical-align: top;
-}
-
 .table th,
 .table .th {
   background-color: #f9f9f9;
   letter-spacing: -1px;
 }
-
 .table th {
   padding: 14px 20px 14px 20px;
-}
-
-.table th,
-.table td {
-  border-spacing: 0;
-  border: 1px solid #ededed;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: inherit;
-  color: #666;
-}
-
-.table-wrap.horizontal .type1 > tbody > tr:first-child > th,
-.table-wrap.horizontal .type1 > tbody > tr:first-child > td {
-  border-top: none;
-}
-.table-wrap.horizontal .table th,
-.table-wrap.horizontal .table td {
-  text-align: left;
-}
-.table-wrap.horizontal td {
-  border-left: 0;
-  border-right: 0;
-}
-.table-wrap.horizontal td {
-  position: relative;
 }
 .table td {
   padding: 10px 20px;
@@ -112,3 +62,92 @@ table {
   line-height: inherit;
   color: #666;
 }
+.input {
+  height: 30px;
+  padding: 1px 10px 2px;
+  border: 1px solid #ddd;
+}
+select.input {
+  padding-right: 25px;
+  font-size: 13px;
+  border-radius: 0px;
+}
+
+.form.inline > div {
+  margin-left: 10px;
+  display: inline-block;
+  float: none;
+  font-size: 0;
+  line-height: 0;
+}
+.ui-datepicker-wrap .input {
+  display: inline-block;
+  width: 110px;
+}
+
+/* .btn-tab:first-child {
+  border-left: 1px solid #c3c3c3;
+} */
+.btn-tab.on,
+.button.red,
+.button.red:hover {
+  background-color: #e67e22;
+  border-color: #e67e22;
+  /* background-color: #ee5555;
+  border-color: #ee5555; */
+  color: #fff;
+  /* margin-left: -1px; */
+}
+.btn-tab {
+  display: inline-block;
+  padding-bottom: 1px;
+  margin-top: -1px;
+  width: 63px;
+  height: 30px;
+  border: 1px solid #c3c3c3;
+  border-radius: 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.button {
+  color: #333;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  border: 1px solid #c3c3c3;
+  border-radius: 0;
+  outline: none;
+  background-image: none;
+  background-color: #fff;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-wrap {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+}
+
+.button.large,
+.form.large .button {
+  display: inline-block;
+  padding: 0 30px 2px 30px;
+  min-width: 116px;
+  margin-left: 10px;
+  height: 44px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* .button.red,
+.button.red:hover {
+  border-color: #ee5555 !important;
+  background-color: #ee5555;
+  color: #fff;
+} */
