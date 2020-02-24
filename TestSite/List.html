@@ -1,207 +1,246 @@
-<link rel="stylesheet" href="css/fontawesome-all.min.css" />
-<link rel="stylesheet" href="css/normalize.css" />
-<link rel="stylesheet" href="css/global.css" />
-<link rel="stylesheet" href="css/tailwind.css" />
-<link rel="stylesheet" href="css/sub.css" />
-<link rel="stylesheet" href="dhtmlx/grid.min.css" />
-<script type="text/javascript" src="dhtmlx/grid.js?v=6.4.1"></script>
-<script type="text/javascript" src="dhtmlx/dataset.js?v=6.4.1"></script>
-<script type="text/javascript" src="dhtmlx/dataset.js"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta block -->
+    <title>WemakePrice</title>
 
-<div class="mwrap">
-  <div class="title-wrap">
-    <h2>배송현황</h2>
-  </div>
-  <br /><br />
-  <!--Search -->
+    <!-- end meta block -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      charset="utf-8"
+    />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="css/sub.css" />
+    <script type="text/javascript" src="codebase/grid.js?v=6.4.1"></script>
+    <link rel="stylesheet" href="codebase/grid.css?v=6.4.1" />
+    <script type="text/javascript" src="common/dataset.js?v=6.4.1"></script>
+    <!-- custom sample head -->
+  </head>
+  <body>
+    <div class="mwrap">
+      <div class="title-wrap">
+        <h2>배송현황</h2>
+      </div>
+      <br /><br />
+      <!--Search -->
 
-  <form id="searchForm" name="searchForm" onsubmit="return false;">
-    <div class="table-wrap horizontal">
-      <table class="table type1">
-        <!-- type1 -->
-        <caption></caption>
-        <colgroup>
-          <col width="130px" />
-          <col width="400px" />
-          <col width="130px" />
-          <col width="*" />
-        </colgroup>
-        <tbody>
-          <tr>
-            <th><span class="title">검색기간</span></th>
-            <td colspan="3">
-              <div class="form inline">
-                <select
-                  class="input medium"
-                  id="schDateType"
-                  name="schDateType"
-                >
-                  <option value="">주문일시</option>
-                  <option value="invoiceNo">발송기한</option>
-                </select>
+      <form id="searchForm" name="searchForm" onsubmit="return false;">
+        <div class="table-wrap horizontal">
+          <table class="table type1">
+            <!-- type1 -->
+            <caption></caption>
+            <colgroup>
+              <col width="130px" />
+              <col width="400px" />
+              <col width="130px" />
+              <col width="*" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th><span class="title">검색기간</span></th>
+                <td colspan="3">
+                  <div class="form inline">
+                    <select
+                      class="input medium"
+                      id="schDateType"
+                      name="schDateType"
+                    >
+                      <option value="">주문일시</option>
+                      <option value="invoiceNo">발송기한</option>
+                    </select>
 
-                <input
-                  type="text"
-                  class="input large ml-3 mr-1"
-                  id="startDate"
-                  name="startDate"
-                />
-                <span class="btn-calendar">
-                  <a href="#">
-                    <img
-                      src="./img/iconmonstr-calendar-thin.svg"
-                      alt="calendar"
+                    <input
+                      type="text"
+                      class="input large ml-3 mr-1"
+                      id="startDate"
+                      name="startDate"
                     />
-                  </a>
-                </span>
+                    <span class="btn-calendar">
+                      <a href="#">
+                        <img
+                          src="./img/iconmonstr-calendar-thin.svg"
+                          alt="calendar"
+                        />
+                      </a>
+                    </span>
 
-                ~
-                <input
-                  type="text"
-                  class="input large ml-1"
-                  id="endDate"
-                  name="endDate"
-                />
-                <span class="btn-calendar">
-                  <a href="#">
-                    <img
-                      src="./img/iconmonstr-calendar-thin.svg"
-                      alt="calendar"
-                      title="시작일시 달력"
+                    ~
+                    <input
+                      type="text"
+                      class="input large ml-1"
+                      id="endDate"
+                      name="endDate"
                     />
-                  </a>
-                </span>
-                <button class="btn-tab setDate on ml-3" id="setTodayBtn">
-                  오늘
-                </button>
-                <button class="btn-tab setDate" id="setTodayBtn">
-                  1주일
-                </button>
-                <button class="btn-tab setDate" id="setTodayBtn">
-                  1개월
-                </button>
-                <button class="btn-tab setDate" id="setTodayBtn">
-                  1년
-                </button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th><span class="title">검색조건</span></th>
-            <td>
-              <div class="form inline">
-                <select class="input medium" id="schType" name="schType">
-                  <option value="">상세검색전체</option>
-                  <option value="purchaseNo">구매번호</option>
-                  <option value="orderNo">주문번호</option>
-                  <option value="prodNo">상품번호</option>
-                  <option value="prodNm">상품명</option>
-                  <option value="bundleNo">배송번호</option>
-                  <option value="receiverNm">받는사람</option>
-                  <option value="invoiceNo">송장번호</option>
-                </select>
-                <input
-                  type="text"
-                  class="input large"
-                  id="schValue"
-                  name="schValue"
-                />
-              </div>
-            </td>
-            <th><span class="title">주문상태</span></th>
-            <td>
-              <select
-                class="input medium"
-                id="schShipStatus"
-                name="schShipStatus"
-              >
-                <option value="">전체</option>
+                    <span class="btn-calendar">
+                      <a href="#">
+                        <img
+                          src="./img/iconmonstr-calendar-thin.svg"
+                          alt="calendar"
+                          title="시작일시 달력"
+                        />
+                      </a>
+                    </span>
+                    <button class="btn-tab setDate on ml-3" id="setTodayBtn">
+                      오늘
+                    </button>
+                    <button class="btn-tab setDate" id="setTodayBtn">
+                      1주일
+                    </button>
+                    <button class="btn-tab setDate" id="setTodayBtn">
+                      1개월
+                    </button>
+                    <button class="btn-tab setDate" id="setTodayBtn">
+                      1년
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><span class="title">검색조건</span></th>
+                <td>
+                  <div class="form inline">
+                    <select class="input medium" id="schType" name="schType">
+                      <option value="">상세검색전체</option>
+                      <option value="purchaseNo">구매번호</option>
+                      <option value="orderNo">주문번호</option>
+                      <option value="prodNo">상품번호</option>
+                      <option value="prodNm">상품명</option>
+                      <option value="bundleNo">배송번호</option>
+                      <option value="receiverNm">받는사람</option>
+                      <option value="invoiceNo">송장번호</option>
+                    </select>
+                    <input
+                      type="text"
+                      class="input large"
+                      id="schValue"
+                      name="schValue"
+                    />
+                  </div>
+                </td>
+                <th><span class="title">주문상태</span></th>
+                <td>
+                  <select
+                    class="input medium"
+                    id="schShipStatus"
+                    name="schShipStatus"
+                  >
+                    <option value="">전체</option>
 
-                <option value="D3" selected="selected">배송중</option>
+                    <option value="D3" selected="selected">배송중</option>
 
-                <option value="D4">배송완료</option>
-              </select>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+                    <option value="D4">배송완료</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //table-wrap -->
+
+        <!-- button-wrap -->
+        <div class="button-wrap">
+          <button type="submit" id="searchBtn" class="button large red">
+            검색
+          </button>
+          <button type="button" id="resetBtn" class="button large ">
+            초기화
+          </button>
+        </div>
+        <!-- //button-wrap -->
+      </form>
+
+      <!--//Search -->
+
+      <!-- Boart title-->
+      <div class="result-title">
+        <div class="button-wrap-left">
+          <button type="button" id="btn_editInvoiceNo" class="button small">
+            일괄접수
+          </button>
+        </div>
+
+        <div class="button-wrap">
+          <select class="input small" id="schLimitCnt" name="schLimitCnt">
+            <option value="50">50개</option>
+            <option value="100" selected="selected">100개</option>
+            <option value="200">200개</option>
+            <option value="300">300개</option>
+            <option value="400">400개</option>
+            <option value="500">500개</option>
+          </select>
+        </div>
+
+        <div class="result-search">
+          <strong id="deliveryStatTitle">상세 검색 결과 </strong
+          ><span id="searchCnt">0건</span>
+        </div>
+      </div>
+      <!-- // Boart title-->
+      <div class="cm-grid" id="grid"></div>
     </div>
-    <!-- //table-wrap -->
 
-    <!-- button-wrap -->
-    <div class="button-wrap">
-      <button type="submit" id="searchBtn" class="button large red">
-        검색
-      </button>
-      <button type="button" id="resetBtn" class="button large ">초기화</button>
-    </div>
-    <!-- //button-wrap -->
-  </form>
+    <script>
+      var grid = new dhx.Grid("grid", {
+        columns: [
+          {
+            width: 200,
+            id: "country",
+            header: [{ text: "Country" }],
+            sortable: true
+          },
+          { width: 150, id: "population", header: [{ text: "Population" }] },
+          {
+            width: 150,
+            id: "yearlyChange",
+            header: [{ text: "Yearly Change" }]
+          },
+          {
+            width: 150,
+            id: "netChange",
+            header: [
+              { text: '<input class="custom_div" id="chks" type="checkbox">' }
+            ],
+            sortable: false,
+            htmlEnable: true,
+            template: function(text, row, col) {
+              return (
+                '<input class="custom_div" type="checkbox" name="gridchk"  ' +
+                (text > 300000 ? "checked" : "") +
+                " ></div>"
+              );
+            }
+          },
+          { width: 150, id: "destiny", header: [{ text: "Density (P/Km²)" }] },
+          { width: 150, id: "area", header: [{ text: "Land Area (Km²)" }] },
+          { width: 150, id: "migrants", header: [{ text: "Migrants (net)" }] },
+          { width: 150, id: "fert", header: [{ text: "Fert. Rate" }] },
+          { width: 150, id: "age", header: [{ text: "Med. Age" }] },
+          { width: 150, id: "urban", header: [{ text: "Urban Pop" }] }
+        ],
+        data: dataset
+      });
 
-  <!--//Search -->
+      const checkbox = document.getElementById("chks");
 
-  <!-- Boart title-->
-  <div class="result-title">
-    <div class="button-wrap-left">
-      <button type="button" id="btn_editInvoiceNo" class="button small">
-        일괄접수
-      </button>
-    </div>
+      var size = document.getElementsByName("gridchk").length;
+      checkbox.addEventListener("change", event => {
+        if (event.target.checked) {
+          //alert("checked");
 
-    <div class="button-wrap">
-      <select class="input small" id="schLimitCnt" name="schLimitCnt">
-        <option value="50">50개</option>
-        <option value="100" selected="selected">100개</option>
-        <option value="200">200개</option>
-        <option value="300">300개</option>
-        <option value="400">400개</option>
-        <option value="500">500개</option>
-      </select>
-    </div>
-
-    <div class="result-search">
-      <strong id="deliveryStatTitle">상세 검색 결과 </strong
-      ><span id="searchCnt">0건</span>
-    </div>
-  </div>
-  <!-- // Boart title-->
-  <div class="cm-grid" id="grid"></div>
-</div>
-
-<script>
-  var grid = new dhx.Grid("grid", {
-    columns: [
-      {
-        width: 200,
-        id: "country",
-        header: [{ text: "Country" }],
-        sortable: true
-      },
-      { width: 150, id: "population", header: [{ text: "Population" }] },
-      { width: 150, id: "yearlyChange", header: [{ text: "Yearly Change" }] },
-      {
-        width: 150,
-        id: "netChange",
-        header: [{ text: '<input class="custom_div" type="checkbox">' }],
-        sortable: false,
-        htmlEnable: true,
-        template: function(text, row, col) {
-          return (
-            '<input class="custom_div" type="checkbox" disabled ' +
-            (text > 300000 ? "checked" : "") +
-            " ></div>"
-          );
+          for (var i = 0; i < size; i++) {
+            document.getElementsByName("gridchk")[i].checked = true;
+          }
+        } else {
+          //alert("not checked");
+          for (var i = 0; i < size; i++) {
+            document.getElementsByName("gridchk")[i].checked = false;
+          }
         }
-      },
-      { width: 150, id: "destiny", header: [{ text: "Density (P/Km²)" }] },
-      { width: 150, id: "area", header: [{ text: "Land Area (Km²)" }] },
-      { width: 150, id: "migrants", header: [{ text: "Migrants (net)" }] },
-      { width: 150, id: "fert", header: [{ text: "Fert. Rate" }] },
-      { width: 150, id: "age", header: [{ text: "Med. Age" }] },
-      { width: 150, id: "urban", header: [{ text: "Urban Pop" }] }
-    ],
-    data: dataset
-  });
-
-  //grid.enableAutoHeight(true);
-</script>
+      });
+    </script>
+  </body>
+</html>
