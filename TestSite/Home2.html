@@ -18,15 +18,15 @@
         </h1>
         <div class="nav">
           <h2 class="username">홍길동</h2>
-          <button type="button" class="btn_nav">
+          <button type="button" id="btnNavMenu" class="btn_nav">
             <i class="fas fa-bars fa-border"></i>
             <!--fas-color-black -->
             <span class="blind">My menu</span>
           </button>
-          <!-- <ul class="lnb">
+          <ul class="lnb">
             <li><a href="#">내정보</a></li>
             <li><a href="#">로그아웃</a></li>
-          </ul> -->
+          </ul>
         </div>
       </div>
       <div id="header-tab">
@@ -95,7 +95,7 @@
             ></iframe> -->
             <iframe
               id="content_iframe"
-              src="list.html"
+              src="create.html"
               frameborder="0" 
               scrolling="No"
             ></iframe>
@@ -119,14 +119,33 @@
 
         document.getElementById("content_iframe").height = iHeight - 110;
 
-        if (iWidth > 2063) {
+        // if (iWidth > 2063) {
+        //   document.getElementById("content_iframe").width = iWidth - 217;
+        // } else {
+        //   document.getElementById("content_iframe").width = 1845;
+        // }
+        if (iWidth > 1406) {
           document.getElementById("content_iframe").width = iWidth - 217;
         } else {
-          document.getElementById("content_iframe").width = 1845;
+          document.getElementById("content_iframe").width = 1188;
         }
       };
 
       setIframeSize();
+
+      const navMenu = document.getElementById("btnNavMenu");
+
+      navMenu.addEventListener("click", event => {
+        
+        const menuClass = document.getElementsByClassName('lnb');
+
+        if (menuClass[0].style.left === "0px") {
+          menuClass[0].setAttribute('style', 'left: -100%');
+        }else{
+        menuClass[0].setAttribute('style', 'left: 0px');
+        }
+      });
+      
     </script>
   </body>
 </html>

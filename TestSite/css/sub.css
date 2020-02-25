@@ -203,3 +203,44 @@ select.input {
 .cm-grid {
   height: 800px;
 }
+
+
+/* Create*/
+.answer-wrap {
+  padding: 20px 10px 20px 20px;
+}
+.answer-wrap textarea {
+  margin-top: 15px;
+  height: 100px;
+}
+
+textarea.input {
+  padding: 12px 10px;
+  line-height: 1.5;
+}
+
+.input {
+  box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+}
+
+.answer-wrap .answer-top, .answer-wrap .answer-bottom {
+  display: table;
+  width: 100%;
+  font-size: 0;
+  line-height: 0;
+}
+
+.answer-wrap .answer-bottom .buttons {
+  float: right;
+  margin-top: 15px;
+}
+
+.button.medium, .form.medium .button {
+  display: inline-block;
+  padding: 0 15px 2px 15px;
+  height: 30px;
+  font-size: 13px;
+  line-height: 14px;
+}

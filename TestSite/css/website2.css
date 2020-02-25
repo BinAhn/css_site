@@ -71,6 +71,35 @@
   color: #2e313a;
 }
 
+
+#header .lnb {
+  position: relative;
+  float: right;
+  z-index: 30;
+  top: 100px;
+  left: -100%; 
+  
+  width: 150px;
+  cursor: pointer;
+}
+#header .lnb li a {
+  display: block;
+  padding-left: 20px;
+  border-bottom: 1px solid #333;
+  background-color: #2e313a;
+  color: #ccc;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+#header .lnb li a:hover {
+  background-color: #D9ECFF;
+  color: #000;
+}
+
 #header-tab {
   position: fixed;
   top: 50px;
@@ -219,7 +248,7 @@
 #snb .snb-nav li a {
   display: block;
   /* padding-left: 20px; */
-  border-bottom: 1px solid rgb(39, 32, 32);
+  border-bottom: 1px solid #333;
   /* font-size: 15px; */
 
   background-color: #2e313a;
